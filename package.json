@@ -1,0 +1,15 @@
+{
+  "name": "pocketmod.c",
+  "version": "1.2018.6",
+  "description": "Small ANSI C library for turning ProTracker MOD files into playable PCM audio; rombankzero (2018).",
+  "keywords": ["c", "library", "mod", "protracker", "audio", "pcm", "pocketmod", "pocket", "tanks"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/pocketmod.c.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodef/pocketmod.c/issues"
+  },
+  "homepage": "https://github.com/nodef/pocketmod.c#readme"
+}

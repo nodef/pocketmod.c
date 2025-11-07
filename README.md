@@ -1,7 +1,8 @@
 # About #
 
 pocketmod is a small ANSI C library for turning ProTracker [MOD files][1] into
-playable PCM audio. It comes as an STB-style [single-file library][2], with no
+playable PCM audio, by [rombankzero](https://github.com/rombankzero).
+It comes as an STB-style [single-file library][2], with no
 external dependencies (not even the C standard library). The library has been
 tested on a wide range of MOD files, and should be fairly accurate. The code is
 MIT-licensed.
@@ -10,9 +11,21 @@ MIT-licensed.
 
 # Using the library #
 
+## Installation ##
+
+Run:
+```bash
+$ npm i pocketmod.c
+```
+
+And then include `pocketmod.h` as follows:
+```c
+#include "node_modules/pocketmod.c/pocketmod.h"
+```
+
 ## Integration ##
 
-`pocketmod.h` is meant to be dropped into your source tree and compiled along
+`pocketmod.h` is meant to be compiled along
 with the rest of your code. To create the library implementation, #define
 `POCKETMOD_IMPLEMENTATION` before including the header in one source file.
 
@@ -193,3 +206,10 @@ of some of the songs, but they are otherwise unaltered.
 [14]: https://modarchive.org/module.php?171453
 [15]: https://modarchive.org/module.php?159847
 [16]: https://modarchive.org/module.php?164025
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/pocketmod.c)
