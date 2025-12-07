@@ -5,6 +5,7 @@ external dependencies (not even the C standard library). The library has been
 tested on a wide range of MOD files, and should be fairly accurate. The code is
 MIT-licensed.
 
+<br>
 
 
 # Using the library #
@@ -18,8 +19,39 @@ $ npm i pocketmod.c
 
 And then include `pocketmod.h` as follows:
 ```c
+// main.c
+#define POCKETMOD_IMPLEMENTATION
 #include "node_modules/pocketmod.c/pocketmod.h"
+
+int main() { /* ... */ }
 ```
+
+And then compile with `clang` or `gcc` as usual.
+
+```bash
+$ clang main.c  # or, use gcc
+$ gcc   main.c
+```
+
+You may also use a simpler approach:
+
+```c
+// main.c
+#define POCKETMOD_IMPLEMENTATION
+#include <pocketmod.h>
+
+int main() { /* ... */ }
+```
+
+If you add the path to `node_modules/pocketmod.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/pocketmod.c main.c  # or, use gcc
+$ gcc   -I./node_modules/pocketmod.c main.c
+```
+
+<br>
+
 
 ## Integration ##
 
@@ -27,6 +59,7 @@ And then include `pocketmod.h` as follows:
 with the rest of your code. To create the library implementation, #define
 `POCKETMOD_IMPLEMENTATION` before including the header in one source file.
 
+<br>
 
 
 ## Library API ##
@@ -105,6 +138,7 @@ This function returns the number of times the song has looped. The song is
 considered to have looped when reaching a previously encountered pattern order
 position.
 
+<br>
 
 
 # Configuration #
@@ -129,6 +163,7 @@ they're defined the same in *every* source file that includes `pocketmod.h`. I
 recommend that you use your build system to do this consistently across your
 whole project.
 
+<br>
 
 
 # Example programs #
@@ -164,6 +199,7 @@ And here's what it looks like:
     $ ./player songs/king.mod
     Playing 'king.mod' [00:03] Press Ctrl + C to stop
 
+<br>
 
 
 # Song credits #
